@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class FunFactsActivity extends AppCompatActivity {
 
+    private FactBook mFactBook = new FactBook();
     private TextView mFactTextView;
     private Button mShowFactButton;
 
@@ -22,7 +23,7 @@ public class FunFactsActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mFactTextView.setText("");
+                mFactTextView.setText(mFactBook.getFact());
             }
         };
         mShowFactButton.setOnClickListener(listener);
