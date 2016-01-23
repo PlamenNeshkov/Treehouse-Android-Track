@@ -6,7 +6,7 @@ import java.util.Random;
  * Created by plamen on 1/23/16.
  */
 public class FactBook {
-    private final String[] mFacts = {
+    private static final String[] mFacts = {
             "Ants stretch when they wake up in the morning.",
             "Ostriches can run faster than horses.",
             "Olympic gold medals are actually made mostly of silver.",
@@ -19,7 +19,7 @@ public class FactBook {
             "Mammoths still walked the earth when the Great Pyramid was being built."
     };
 
-    public String getFact() {
+    public static String getFact() {
         int randomNumber = new Random().nextInt(mFacts.length);
         return mFacts[randomNumber];
     }

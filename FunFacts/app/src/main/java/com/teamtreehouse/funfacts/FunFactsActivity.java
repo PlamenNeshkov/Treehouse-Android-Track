@@ -2,15 +2,16 @@ package com.teamtreehouse.funfacts;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FunFactsActivity extends AppCompatActivity {
+    private static final String TAG = FunFactsActivity.class.getSimpleName();
 
-    private FactBook mFactBook = new FactBook();
-    private ColorWheel mColorWheel = new ColorWheel();
     private TextView mFactTextView;
     private Button mShowFactButton;
     private RelativeLayout mRelativeLayout;
@@ -27,12 +28,16 @@ public class FunFactsActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mFactTextView.setText(mFactBook.getFact());
-                int color = mColorWheel.getColor();
+                mFactTextView.setText(FactBook.getFact());
+                int color = ColorWheel.getColor();
                 mRelativeLayout.setBackgroundColor(color);
                 mShowFactButton.setTextColor(color);
             }
         };
         mShowFactButton.setOnClickListener(listener);
+
+        // Some testing and debugging methods
+        Toast.makeText(this, "Yay! Our Activity was created!", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "We're logging from the onCreate method");
     }
 }
