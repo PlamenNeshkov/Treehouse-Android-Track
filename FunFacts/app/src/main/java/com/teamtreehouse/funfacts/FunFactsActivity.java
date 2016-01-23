@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class FunFactsActivity egixtends AppCompatActivity {
+public class FunFactsActivity extends AppCompatActivity {
 
     private FactBook mFactBook = new FactBook();
     private ColorWheel mColorWheel = new ColorWheel();
