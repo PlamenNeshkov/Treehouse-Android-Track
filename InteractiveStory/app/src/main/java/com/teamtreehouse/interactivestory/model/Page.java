@@ -8,6 +8,22 @@ public class Page {
     private String mText;
     private Choice mChoiceA;
     private Choice mChoiceB;
+    private boolean mIsLast = false;
+
+    public Page(int imageId, String text, Choice choiceA, Choice choiceB) {
+        mImageId = imageId;
+        mText = text;
+        mChoiceA = choiceA;
+        mChoiceB = choiceB;
+    }
+
+    public Page(int imageId, String text) {
+        mImageId = imageId;
+        mText = text;
+        mChoiceA = null;
+        mChoiceB = null;
+        mIsLast = true;
+    }
 
     public int getImageId() {
         return mImageId;
@@ -39,5 +55,13 @@ public class Page {
 
     public void setChoiceB(Choice choiceB) {
         mChoiceB = choiceB;
+    }
+
+    public boolean isLast() {
+        return mIsLast;
+    }
+
+    public void setIsLast(boolean isLast) {
+        mIsLast = isLast;
     }
 }
