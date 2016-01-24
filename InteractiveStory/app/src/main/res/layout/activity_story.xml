@@ -17,7 +17,7 @@
         android:layout_marginStart="90dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/storyImageView"
         android:layout_alignParentTop="true"
@@ -48,8 +48,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/white"
-        android:textColor="#FF3A8AEC" />
+        style="@style/WhiteButton"/>
 
     <Button
         android:layout_width="match_parent"
@@ -59,6 +58,5 @@
         android:layout_above="@+id/choiceButtonB"
         android:layout_alignLeft="@+id/choiceButtonB"
         android:layout_alignStart="@+id/choiceButtonB"
-        android:background="@android:color/white"
-        android:textColor="#FF3A8AEC" />
+        style="@style/WhiteButton"/>
 </RelativeLayout>
